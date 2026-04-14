@@ -12,23 +12,27 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>AMD Plomberie : Dépannage Ultra-Rapide | Région Parisienne</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
     <style>
+        /* VARIABLES CSS : Définition de la charte graphique globale */
         :root {
-            --primary: #0ea5e9; 
-            --secondary: #0f172a;
+            --primary: #0ea5e9;  /* Bleu azur principal */
+            --secondary: #0f172a; /* Bleu nuit pour le texte et fonds sombres */
             --success: #0ea5e9; 
             --white: #ffffff;
             --bg-light: #f0f9ff; 
         }
 
+        /* RESET & BASE : Paramétrages de mise en page universels */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: #334155; line-height: 1.6; scroll-behavior: smooth; }
         h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--secondary); }
 
+        /* BANNIÈRE RGPD : Interface de consentement utilisateur */
         #gdpr-pro-banner {
             position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 400px;
             background: var(--white); border-radius: 20px; padding: 24px;
@@ -45,6 +49,7 @@
         .btn-accept:hover { background: #0284c7; }
         .btn-refuse { background: #f1f5f9; color: var(--secondary); }
 
+        /* HEADER : Navigation collante avec effet de flou (Glassmorphism) */
         header {
             position: fixed; top: 0; width: 100%; height: 90px;
             background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px);
@@ -54,38 +59,28 @@
         .logo-container { display: flex; align-items: center; text-decoration: none; }
         
         .logo-icon-pro { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            width: 50px; 
-            height: 50px; 
+            display: flex; align-items: center; justify-content: center; 
+            width: 50px; height: 50px; 
             background: linear-gradient(135deg, #0ea5e9, #2563eb);
-            border-radius: 14px; 
-            box-shadow: 0 8px 15px rgba(14, 165, 233, 0.2); 
+            border-radius: 14px; box-shadow: 0 8px 15px rgba(14, 165, 233, 0.2); 
         }
         
         nav.main-nav { display: flex; gap: 20px; }
         nav.main-nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
         nav.main-nav a:hover { color: var(--primary); }
 
+        /* CTA TÉLÉPHONE : Bouton d'appel rapide dans le header */
         .nav-phone-btn { 
-            background: var(--success); 
-            color: white; 
-            padding: 12px; 
-            width: 50px;
-            height: 50px;
-            border-radius: 50%; 
-            text-decoration: none; 
-            font-weight: 800; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+            background: var(--success); color: white; 
+            padding: 12px; width: 50px; height: 50px;
+            border-radius: 50%; text-decoration: none; font-weight: 800; 
+            display: flex; align-items: center; justify-content: center;
+            transition: 0.3s; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
             font-size: 1.4rem;
         }
         .nav-phone-btn:hover { transform: scale(1.1); background: #2563eb; }
 
+        /* SECTION HERO : Premier contact visuel et accroche commerciale */
         .hero {
             padding: 140px 5% 80px; 
             background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('pombierparis.jpeg');
@@ -95,25 +90,30 @@
         .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px; }
         .hero h1 span { color: var(--primary); }
 
+        /* MARQUEE : Bandeau défilant des partenaires (Réassurance) */
         .marquee { overflow: hidden; white-space: nowrap; padding: 30px 0; background: white; }
         .marquee-inner { display: inline-flex; animation: scroll 40s linear infinite; align-items: center; opacity: 1; }
         .marquee-inner img { height: 35px; margin: 0 50px; filter: none; }
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
+        /* SERVICES : Grille de présentation des prestations et tarifs */
         .services-section { padding: 80px 5%; background: white; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .service-card { background: var(--bg-light); padding: 40px; border-radius: 24px; border: 1px solid transparent; transition: 0.4s; position: relative; overflow: hidden; }
         .service-card:hover { transform: translateY(-10px); background: white; border-color: #bae6fd; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05); }
         .price-tag { font-size: 1.2rem; font-weight: 700; color: var(--primary); background: #e0f2fe; display: inline-block; padding: 4px 12px; border-radius: 8px; margin-bottom: 15px; }
         
+        /* TRUSTBAR : Mise en avant des arguments de vente (Rapidité, Prix, Garantie) */
         .trust-section { padding: 80px 5%; background: var(--secondary); color: white; border-radius: 40px; margin: 0 20px; text-align: center; }
         .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 50px auto 0; }
         .trust-item svg { margin-bottom: 20px; }
         .trust-item h4 { color: var(--primary); font-size: 1.4rem; margin-bottom: 15px; }
 
+        /* ZONES : Optimisation du maillage géographique pour le SEO local */
         .zones { padding: 80px 5%; text-align: center; }
         .zone-badge { padding: 8px 18px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; font-weight: 600; margin: 6px; display: inline-block; transition: 0.3s; }
 
+        /* CONTACT : Formulaire de demande de devis */
         .contact-section { padding: 100px 5%; background: #f8fafc; }
         .form-card { background: white; padding: 50px; border-radius: 32px; box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); max-width: 800px; margin: 0 auto; }
         input, select, textarea { width: 100%; padding: 16px; border: 2px solid #f1f5f9; border-radius: 12px; margin-bottom: 20px; font-size: 1rem; }
@@ -121,23 +121,15 @@
 
         footer { background: #000; padding: 60px 5%; color: #64748b; text-align: center; }
 
+        /* FLOATING ACTION BUTTON : Bouton d'appel flottant avec animation d'alerte */
         .floating-call { 
-            position: fixed; 
-            bottom: 30px; 
-            right: 30px; 
-            background: #2563eb; 
-            color: white; 
-            width: 70px;
-            height: 70px;
-            border-radius: 50%; 
-            text-decoration: none; 
-            z-index: 2000; 
+            position: fixed; bottom: 30px; right: 30px; 
+            background: #2563eb; color: white; 
+            width: 70px; height: 70px; border-radius: 50%; 
+            text-decoration: none; z-index: 2000; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            font-size: 2rem;
-            animation: pulse-blue 2s infinite;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; animation: pulse-blue 2s infinite;
         }
 
         @keyframes pulse-blue {
@@ -146,10 +138,11 @@
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
         }
 
+        /* RESPONSIVE : Adaptations pour tablettes et mobiles */
         @media (max-width: 768px) { 
             header { height: 75px; }
             .hero h1 { font-size: 2.2rem; } 
-            .main-nav { display: none; } 
+            .main-nav { display: none; } /* Cache la nav texte sur mobile au profit du bouton d'appel */
             .hero { padding: 120px 5% 60px; }
             .trust-section { margin: 0 10px; padding: 60px 5%; }
         }
@@ -251,6 +244,43 @@
                 <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 <h4>Garantie</h4>
                 <p>Interventions garanties 2 ans minimum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section" id="avis" style="padding: 100px 5%; background: #ffffff;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 2.5rem; font-weight: 800;">Ce que disent nos clients</h2>
+            <div style="color: #f59e0b; font-size: 1.5rem; margin-top: 10px;">
+                ★★★★★ <span style="color: #64748b; font-size: 1rem; font-weight: 600;">(4.9/5 sur Google Maps)</span>
+            </div>
+        </div>
+        
+        <style>
+            .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+            .review-card { background: var(--bg-light); padding: 40px; border-radius: 24px; border: 2px solid #bae6fd; transition: 0.3s; }
+            .review-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.1); }
+            .review-author { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: var(--secondary); display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+            .review-stars { color: #f59e0b; font-size: 0.9rem; margin-bottom: 20px; }
+            .review-text { color: #475569; font-style: italic; font-size: 1rem; line-height: 1.7; }
+            .google-badge { display: inline-block; width: 22px; height: 22px; background: url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg') no-repeat center; background-size: contain; }
+        </style>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-author"><span class="google-badge"></span> Marc D.</div>
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Intervention hyper rapide pour un ballon d'eau chaude en panne un dimanche matin. Le technicien était pro et transparent sur les tarifs. Je recommande vivement !"</p>
+            </div>
+            <div class="review-card">
+                <div class="review-author"><span class="google-badge"></span> Sophie L.</div>
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Fuite encastrée détectée en moins de 20 minutes sans rien casser. Très satisfaite du service et de la courtoisie de l'équipe AMD."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-author"><span class="google-badge"></span> Jean-Pierre R.</div>
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Débouchage de canalisation effectué proprement. Le prix annoncé au téléphone a été respecté. C'est rare de trouver des plombiers aussi honnêtes."</p>
             </div>
         </div>
     </section>
