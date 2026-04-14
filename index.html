@@ -1,0 +1,290 @@
+# Plombrie-paris-frere-mathis-
+<!doctype html>
+<html lang="fr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18049108666"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18049108666');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMD Plomberie : Dépannage Ultra-Rapide | Région Parisienne</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #0ea5e9; 
+            --secondary: #0f172a;
+            --success: #0ea5e9; 
+            --white: #ffffff;
+            --bg-light: #f0f9ff; 
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #334155; line-height: 1.6; scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--secondary); }
+
+        #gdpr-pro-banner {
+            position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px;
+            background: var(--white); border-radius: 16px; padding: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1); z-index: 10001;
+            border: 1px solid #e2e8f0;
+        }
+        .gdpr-btns { display: flex; gap: 10px; margin-top: 15px; }
+        .gdpr-btns button { flex: 1; padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer; border: none; }
+
+        header {
+            position: fixed; top: 0; width: 100%; height: 90px;
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px);
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center;
+            justify-content: space-between; padding: 0 5%; z-index: 1000;
+        }
+        .logo-container { display: flex; align-items: center; text-decoration: none; }
+        
+        .logo-icon-pro { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 50px; 
+            height: 50px; 
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            border-radius: 14px; 
+            box-shadow: 0 8px 15px rgba(14, 165, 233, 0.2); 
+        }
+        
+        nav.main-nav { display: flex; gap: 20px; }
+        nav.main-nav a { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+        nav.main-nav a:hover { color: var(--primary); }
+
+        .nav-phone-btn { 
+            background: var(--success); 
+            color: white; 
+            padding: 12px; 
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; 
+            text-decoration: none; 
+            font-weight: 800; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+            font-size: 1.4rem;
+        }
+        .nav-phone-btn:hover { transform: scale(1.1); background: #2563eb; }
+
+        .hero {
+            padding: 160px 5% 80px; 
+            /* Remplacement par l'image pombierparis.jpeg */
+            background: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('pombierparis.jpeg');
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            text-align: center; display: flex; flex-direction: column; align-items: center;
+        }
+        .hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px; }
+        .hero h1 span { color: var(--primary); }
+
+        .marquee { overflow: hidden; white-space: nowrap; padding: 30px 0; background: white; }
+        .marquee-inner { display: inline-flex; animation: scroll 40s linear infinite; align-items: center; opacity: 0.6; }
+        .marquee-inner img { height: 35px; margin: 0 50px; filter: grayscale(100%); transition: 0.3s; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        .services-section { padding: 80px 5%; background: white; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .service-card { background: var(--bg-light); padding: 40px; border-radius: 24px; border: 1px solid transparent; transition: 0.4s; position: relative; overflow: hidden; }
+        .service-card:hover { transform: translateY(-10px); background: white; border-color: #bae6fd; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05); }
+        .price-tag { font-size: 1.2rem; font-weight: 700; color: var(--primary); background: #e0f2fe; display: inline-block; padding: 4px 12px; border-radius: 8px; margin-bottom: 15px; }
+        
+        .trust-section { padding: 80px 5%; background: var(--secondary); color: white; border-radius: 40px; margin: 0 20px; text-align: center; }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 50px auto 0; }
+        .trust-item h4 { color: var(--primary); font-size: 1.4rem; margin-bottom: 15px; }
+
+        .reviews-section { padding: 80px 5%; text-align: center; }
+        .review-card { background: white; padding: 35px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
+
+        .zones { padding: 80px 5%; text-align: center; }
+        .zone-badge { padding: 8px 18px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; font-weight: 600; margin: 6px; display: inline-block; transition: 0.3s; }
+
+        .contact-section { padding: 100px 5%; background: #f8fafc; }
+        .form-card { background: white; padding: 50px; border-radius: 32px; box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); max-width: 800px; margin: 0 auto; }
+        input, select, textarea { width: 100%; padding: 16px; border: 2px solid #f1f5f9; border-radius: 12px; margin-bottom: 20px; font-size: 1rem; }
+        .btn-submit { width: 100%; background: var(--primary); color: white; padding: 20px; border-radius: 12px; border: none; font-weight: 800; cursor: pointer; font-size: 1.2rem; }
+
+        footer { background: #000; padding: 60px 5%; color: #64748b; text-align: center; }
+
+        .floating-call { 
+            position: fixed; 
+            bottom: 30px; 
+            right: 30px; 
+            background: #2563eb; 
+            color: white; 
+            width: 70px;
+            height: 70px;
+            border-radius: 50%; 
+            text-decoration: none; 
+            z-index: 2000; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 2rem;
+            animation: pulse-blue 2s infinite;
+        }
+
+        @keyframes pulse-blue {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .main-nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <div id="gdpr-pro-banner">
+        <p style="font-weight: 800; font-size: 1.1rem; margin-bottom: 8px;">💧 Service Client AMD</p>
+        <p style="font-size: 0.9rem; color: #64748b;">Prise en charge rapide de vos urgences.</p>
+        <div class="gdpr-btns">
+            <button style="background: var(--secondary); color: white;" onclick="this.closest('#gdpr-pro-banner').remove()">Accepter</button>
+            <button style="background: #f1f5f9; color: var(--secondary);" onclick="this.closest('#gdpr-pro-banner').remove()">Refuser</button>
+        </div>
+    </div>
+
+    <header>
+        <a href="#accueil" class="logo-container">
+            <div class="logo-icon-pro">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 3a8 8 0 0 1 8 7.2c0 7.3-8 11.8-8 11.8z"/>
+                    <circle cx="12" cy="11" r="3"/>
+                </svg>
+            </div>
+            <span style="margin-left: 12px; font-weight: 800; font-size: 1.3rem; letter-spacing: -0.5px; color: var(--secondary);">AMD <span style="color: var(--primary);">Plomberie</span></span>
+        </a>
+        <nav class="main-nav">
+            <a href="#services">Prestations</a>
+            <a href="#intervention">Zones</a>
+            <a href="#contact">Devis</a>
+        </nav>
+        <a href="tel:0627558855" class="nav-phone-btn">📞</a>
+    </header>
+
+    <section class="hero" id="accueil">
+        <p style="font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Intervention d'urgence 24/7</p>
+        <h1>Dépannage Plomberie <br><span>en 30 Minutes Chrono</span></h1>
+        <p style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin-bottom: 40px;">Experts certifiés pour toutes vos fuites, débouchages et installations en Région Parisienne.</p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <a href="tel:0627558855" style="background: var(--secondary); color: white; padding: 18px 40px; border-radius: 16px; text-decoration: none; font-weight: 800; font-size: 1.1rem; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);">📞 APPELER MAINTENANT</a>
+            <a href="#contact" style="background: white; color: var(--secondary); padding: 18px 40px; border-radius: 16px; text-decoration: none; font-weight: 700; border: 2px solid #e2e8f0;">OBTENIR UN DEVIS</a>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <div class="marquee-inner">
+            <img src="axa.png" alt="AXA"><img src="Maaf.png" alt="MAAF"><img src="matmut.png" alt="Matmut"><img src="generali.png" alt="Generali"><img src="allianze.png" alt="Allianz"><img src="maif.png" alt="MAIF"><img src="macif.png" alt="Macif"><img src="groupama.png" alt="Groupama">
+            <img src="axa.png" alt="AXA"><img src="Maaf.png" alt="MAAF"><img src="matmut.png" alt="Matmut"><img src="generali.png" alt="Generali"><img src="allianze.png" alt="Allianz"><img src="maif.png" alt="MAIF"><img src="macif.png" alt="Macif"><img src="groupama.png" alt="Groupama">
+        </div>
+    </div>
+
+    <section class="services-section" id="services">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.5rem; font-weight: 800;">Nos Solutions Expert</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="price-tag">Dès 80€</span>
+                <h3 style="margin-bottom: 10px;">Recherche de fuite</h3>
+                <p style="color: #64748b; margin-bottom: 25px;">Détection technique sans destruction.</p>
+                <a href="tel:0627558855" style="text-decoration: none; font-weight: 700; color: var(--primary);">Intervention immédiate →</a>
+            </div>
+            <div class="service-card">
+                <span class="price-tag">Dès 110€</span>
+                <h3 style="margin-bottom: 10px;">Débouchage express</h3>
+                <p style="color: #64748b; margin-bottom: 25px;">WC, éviers ou colonnes bouchées.</p>
+                <a href="tel:0627558855" style="text-decoration: none; font-weight: 700; color: var(--primary);">Appeler un technicien →</a>
+            </div>
+            <div class="service-card">
+                <span class="price-tag">Dès 150€</span>
+                <h3 style="margin-bottom: 10px;">Chauffe-eau & Ballon</h3>
+                <p style="color: #64748b; margin-bottom: 25px;">Réparation de résistance ou thermostat.</p>
+                <a href="tel:0627558855" style="text-decoration: none; font-weight: 700; color: var(--primary);">Dépannage 24/7 →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <h2 style="font-size: 2.2rem; font-weight: 800;">L'excellence AMD</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <h4>Rapidité</h4>
+                <p>Arrivée en moins de 30 min chez vous.</p>
+            </div>
+            <div class="trust-item">
+                <h4>Prix Fixes</h4>
+                <p>Devis validé avant le début des travaux.</p>
+            </div>
+            <div class="trust-item">
+                <h4>Garantie</h4>
+                <p>Interventions garanties 2 ans minimum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="zones" id="intervention">
+        <h2 style="font-size: 2rem; margin-bottom: 40px;">Où intervenons-nous ?</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <span class="zone-badge">Paris (75)</span>
+            <span class="zone-badge">Boulogne</span>
+            <span class="zone-badge">Nanterre</span>
+            <span class="zone-badge">Saint-Denis</span>
+            <span class="zone-badge">Créteil</span>
+            <span class="zone-badge">Versailles</span>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="form-card">
+            <h2 style="text-align: center; margin-bottom: 30px;">Besoin d'un devis gratuit ?</h2>
+            <form action="https://formspree.io/f/xgoreykb" method="POST">
+                <input type="hidden" name="_replyto" value="spcp.paris@gmail.com">
+                <input type="text" name="nom" placeholder="Votre nom" required>
+                <input type="tel" name="tel" placeholder="Téléphone" required>
+                <select name="service" required>
+                    <option value="" disabled selected>Nature du problème...</option>
+                    <option value="Fuite">Fuite d'eau</option>
+                    <option value="Bouchon">Canalisation bouchée</option>
+                    <option value="Ballon">Ballon d'eau chaude</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="Décrivez votre urgence..."></textarea>
+                <button type="submit" class="btn-submit">ENVOYER LA DEMANDE</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="legal-section">
+        <div class="legal-container">
+            <div class="legal-box">
+                <h5>Mentions Légales</h5>
+                <p><strong>Éditeur :</strong> AMD Plomberie | <strong>SIRET :</strong> 48983364000043<br>
+                Île-de-France, France | Hébergement : Netlify Inc.</p>
+            </div>
+            <div class="legal-box">
+                <h5>CGV & Confidentialité</h5>
+                <p>Devis gratuit obligatoire. Données collectées uniquement pour votre urgence (RGPD) à spcp.paris@gmail.com.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 AMD Plomberie - Expertise Sanitaire & Chauffage</p>
+    </footer>
+
+    <a href="tel:0627558855" class="floating-call">📞</a>
+
+</body>
+</html>
