@@ -30,13 +30,20 @@
         h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--secondary); }
 
         #gdpr-pro-banner {
-            position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px;
-            background: var(--white); border-radius: 16px; padding: 25px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1); z-index: 10001;
-            border: 1px solid #e2e8f0;
+            position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 400px;
+            background: var(--white); border-radius: 20px; padding: 24px;
+            box-shadow: 0 15px 50px rgba(15, 23, 42, 0.15); z-index: 10001;
+            border: 1px solid #f1f5f9;
+            display: flex; flex-direction: column; gap: 16px;
         }
-        .gdpr-btns { display: flex; gap: 10px; margin-top: 15px; }
-        .gdpr-btns button { flex: 1; padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer; border: none; }
+        .gdpr-btns { display: flex; gap: 10px; }
+        .gdpr-btns button { 
+            flex: 1; padding: 12px; border-radius: 10px; font-weight: 700; 
+            cursor: pointer; border: none; font-family: inherit; transition: 0.2s;
+        }
+        .btn-accept { background: var(--primary); color: white; }
+        .btn-accept:hover { background: #0284c7; }
+        .btn-refuse { background: #f1f5f9; color: var(--secondary); }
 
         header {
             position: fixed; top: 0; width: 100%; height: 90px;
@@ -101,6 +108,7 @@
         
         .trust-section { padding: 80px 5%; background: var(--secondary); color: white; border-radius: 40px; margin: 0 20px; text-align: center; }
         .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1200px; margin: 50px auto 0; }
+        .trust-item svg { margin-bottom: 20px; }
         .trust-item h4 { color: var(--primary); font-size: 1.4rem; margin-bottom: 15px; }
 
         .zones { padding: 80px 5%; text-align: center; }
@@ -138,17 +146,25 @@
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
         }
 
-        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .main-nav { display: none; } }
+        @media (max-width: 768px) { 
+            header { height: 75px; }
+            .hero h1 { font-size: 2.2rem; } 
+            .main-nav { display: none; } 
+            .hero { padding: 120px 5% 60px; }
+            .trust-section { margin: 0 10px; padding: 60px 5%; }
+        }
     </style>
 </head>
 <body>
 
     <div id="gdpr-pro-banner">
-        <p style="font-weight: 800; font-size: 1.1rem; margin-bottom: 8px;">💧 Service Client AMD</p>
-        <p style="font-size: 0.9rem; color: #64748b;">Prise en charge rapide de vos urgences.</p>
+        <div>
+            <p style="font-weight: 800; font-size: 1.1rem; color: var(--secondary);">Respect de la vie privée</p>
+            <p style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">Nous utilisons des cookies pour améliorer votre expérience et traiter vos demandes d'intervention.</p>
+        </div>
         <div class="gdpr-btns">
-            <button style="background: var(--secondary); color: white;" onclick="this.closest('#gdpr-pro-banner').remove()">Accepter</button>
-            <button style="background: #f1f5f9; color: var(--secondary);" onclick="this.closest('#gdpr-pro-banner').remove()">Refuser</button>
+            <button class="btn-accept" onclick="this.closest('#gdpr-pro-banner').remove()">Accepter</button>
+            <button class="btn-refuse" onclick="this.closest('#gdpr-pro-banner').remove()">Refuser</button>
         </div>
     </div>
 
@@ -190,7 +206,7 @@
 
     <section class="services-section" id="services">
         <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-size: 2.5rem; font-weight: 800;">Nos Solutions Expert</h2>
+            <h2 style="font-size: 2.5rem; font-weight: 800;">Nos Solutions Experts</h2>
         </div>
         <div class="services-grid">
             <div class="service-card">
@@ -202,7 +218,7 @@
             <div class="service-card">
                 <span class="price-tag">Dès 110€</span>
                 <h3 style="margin-bottom: 10px;">Débouchage express</h3>
-                <p style="color: #64748b; margin-bottom: 25px;">WC, éviers ou colonnes bouchées.</p>
+                <p style="color: #64748b; margin-bottom: 25px;">WC, éviers ou colonnes bouchés.</p>
                 <a href="tel:0627558855" style="text-decoration: none; font-weight: 700; color: var(--primary);">Appeler un technicien →</a>
             </div>
             <div class="service-card">
@@ -215,17 +231,21 @@
     </section>
 
     <section class="trust-section">
+        <p style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-size: 1.4rem;">Votre partenaire de confiance</p>
         <h2 style="font-size: 2.2rem; font-weight: 800;">Pourquoi travailler avec nous ?</h2>
         <div class="trust-grid">
             <div class="trust-item">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 <h4>Rapidité</h4>
                 <p>Arrivée en moins de 30 min chez vous.</p>
             </div>
             <div class="trust-item">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                 <h4>Prix Fixes</h4>
-                <p>Devis validé avant le début des travaux.</p>
+                <p>Devis gratuit établi avant le début des travaux.</p>
             </div>
             <div class="trust-item">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 <h4>Garantie</h4>
                 <p>Interventions garanties 2 ans minimum.</p>
             </div>
